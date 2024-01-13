@@ -1,0 +1,39 @@
+server.port: 9100
+server.servlet.context-path: /api
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/video?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 20010312
+mybatis-plus:
+  # MyBatis Plus配置
+  # 配置实体扫描，多个package用逗号或分号分隔
+  type-aliases-package: com.gk.study.entity
+  mapper-locations: classpath:mapper/*.xml # 映射文件位置
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+File:
+  uploadPath: D:\aliyun_workspace\video
+
+
+
+BASE_LOCATION: D:\aliyun_workspace\video
+DB_NAME: video
+
+springfox:
+  documentation:
+    swagger-ui:
+      # 生产环境需要关闭
+      enabled: true
+
+
+
+
